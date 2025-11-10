@@ -1,0 +1,25 @@
+{
+    "root.paths": [
+        "."
+    ],  
+
+    "output.path": "~/Documents/context.md",
+
+    "output.mode": "clipboard-file",
+    
+    "include.files": [
+        "*.tf", 
+        "*.md",
+        "*SourceConcat.json" 
+    ], 
+    "exclude.files": [
+        "_DEPRECATED/**",
+        "*.tfvars",
+        "dev/**"
+    ], 
+    "include.content": [
+        ""
+    ], 
+
+    "use.gtignore": true
+}
