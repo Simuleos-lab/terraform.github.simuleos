@@ -3,5 +3,6 @@ repositories = [
   "Simuleos.jl",
   "LiteBlobs.jl",
   "LiteTapes.jl",
+  "terraform.github.simuleos"
   # "another-repo",
 ]
