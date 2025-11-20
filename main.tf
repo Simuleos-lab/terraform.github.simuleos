@@ -9,17 +9,10 @@ terraform {
 
 provider "github" {
   owner = var.github_owner
+  token = var.github_token
 }
 
-variable "github_owner" {
-  type = string
-}
-
-variable "repo_name" {
-  type    = string
-  default = "Simuleos.jl"
-}
-
-data "github_repository" "repo" {
-  full_name = "${var.github_owner}/${var.repo_name}"
+data "github_repository" "repos" {
+  for_each  = var.repositories
+  full_name = "${var.github_owner}/${each.value}"
 }

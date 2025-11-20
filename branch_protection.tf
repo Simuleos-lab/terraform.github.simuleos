@@ -1,5 +1,7 @@
+# branch_protection.tf
 resource "github_branch_protection" "main" {
-  repository_id = data.github_repository.repo.node_id
+  for_each      = data.github_repository.repos
+  repository_id = each.value.node_id
   pattern       = "main"
 
   enforce_admins                  = true

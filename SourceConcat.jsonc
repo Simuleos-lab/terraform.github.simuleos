@@ -10,16 +10,20 @@
     "include.files": [
         "*.tf", 
         "*.md",
-        "*SourceConcat.json" 
+        "*SourceConcat.json", 
+        "*.public.*.tfvars"
     ], 
     "exclude.files": [
         "_DEPRECATED/**",
-        "*.tfvars",
+        ".terraform/**",
+        // "*.private.*.tfvars",
         "dev/**"
     ], 
     "include.content": [
         ""
     ], 
 
-    "use.gtignore": true
+    // "use.gtignore": true, 
+
+    "print.head.lines": 40
 }

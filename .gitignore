@@ -83,8 +83,10 @@ crash.*.log
 *.tfvars
 *.tfvars.json
 # allow the templates
-!*.example.tfvars
-!*.templates.tfvars
+!*.public.*.tfvars
+!*.example.auto.tfvars
+!*.templates.auto.tfvars
+*.private.*.tfvars
 
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in

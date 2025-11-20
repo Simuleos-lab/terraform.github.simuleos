@@ -6,5 +6,11 @@ variable "github_owner" {
 variable "github_token" {
   type        = string
   sensitive   = true
-  description = "Fine-grained PAT with org/repo admin perms"
+  description = "Fine-grained PAT with repo admin permissions"
+}
+
+# variables.tf
+variable "repositories" {
+  description = "Repos to manage in Simuleos-lab"
+  type        = set(string)
 }
