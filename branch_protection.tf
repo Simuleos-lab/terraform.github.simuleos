@@ -10,6 +10,13 @@ resource "github_branch_protection" "main" {
   required_linear_history         = true
   require_conversation_resolution = true
 
+  required_status_checks {
+    # = "Require branches to be up to date before merging"
+    strict   = true     
+    # you can add CI checks here later, e.g. ["ci", "lint"]
+    contexts = []        
+  }
+
   required_pull_request_reviews {
     required_approving_review_count = 1
     dismiss_stale_reviews           = true
